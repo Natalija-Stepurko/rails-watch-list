@@ -1,0 +1,11 @@
+<h1><%= @list.name %></h1>
+
+<div>
+  <% @list.bookmarks.each do |bookmark| %>
+    <div class="movie-card" style="background-image: url('<%= bookmark.movie.poster_url %>');">
+      <h2><%= bookmark.comment  %></h2>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'Create a moviebookmark', new_list_bookmark_path(@list) %>
