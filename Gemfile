@@ -55,4 +55,6 @@ gem "font-awesome-sass", "~> 5.15"
 gem "simple_form"
 
 # For cloudinary
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: [:development, :test] # to remove env from github .env should not be there, we don't want to push it to Github.
+
+gem 'cloudinary', '~> 1.16.0'
