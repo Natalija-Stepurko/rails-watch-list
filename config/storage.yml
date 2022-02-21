@@ -2,9 +2,18 @@ test:
   service: Disk
   root: <%= Rails.root.join("tmp/storage") %>
 
-local:
-  service: Disk
-  root: <%= Rails.root.join("storage") %>
+# rails active_storage:install
+# rails db:migrate
+# This creates two tables in the database to handle the associations between our
+# pictures uploaded on Cloudinary and any Model in our app.
+
+# local:
+#   service: Disk
+#   root: <%= Rails.root.join("storage") %>
+
+cloudinary:
+  service: Cloudinary
+  folder: <%= Rails.env %>
 
 # Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # amazon:
